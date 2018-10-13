@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+        <script src="https://api4.apidaze.io/javascript/releases/APIdaze-0.2.6.min.js"></script>
+
+    <title>Test sms with js</title>
+</head>
+
+<body>
+
+    <div class="alert alert-primary" role="alert">
+        Test de Apidaze with JavaScript
+    </div>
+    <input id="number" type="text" placeholder="57number">
+    <input id="message" placeholder="Your message" type="text">
+    <button onclick="send()">Enviar</button>
+    <div id="estado">
+
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+         function send() {
+          let number = document.getElementById('number');
+            let message = document.getElementById('message');
+            let messagetext = message.value.replace(" ", "%20");
+            var datos = "number=" + number.value + "&body=" + messagetext + "&subject=" + messagetext;
+            
+            $.ajax({
+                type: "POST",
+                url: "https://api4.apidaze.io/964458d3/sms/send?api_secret=6d48de4fddf6712b347d1567932a9ad7",
+                data: datos,
+                success: success2,
+                complete: success2,
+                dataType: "text"                
+            });
+        }
+        function success2(data) {
+            console.log(data);
+            var estado= document.getElementById('estado');
+           estado.innerHTML = "Mensaje Enviado";
+           estado.style.color = "red";
+ //573164971035
+              }
+    </script>
+</body>
+
+</html>
