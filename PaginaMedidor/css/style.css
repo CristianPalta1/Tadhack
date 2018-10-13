@@ -56,6 +56,10 @@ footer.page-footer {
   margin: 0;
 }
 
-p.justificado{ 
+p.justi{ 
   text-align: justify;
+}
+
+h3{
+  color: black
 }
