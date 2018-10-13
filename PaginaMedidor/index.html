@@ -3,25 +3,90 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>PAMELA</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+  <script type="text/javascript" src="jquery.visible.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.visible.js"></script>
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+<!-- Compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+
+
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-        
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#">Registro</a></li>
-          <li><a href="#">Iniciar Sesión
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="index.html">
+              <img id="img4" src="Imagenes/eurekLogo.png"  alt="">
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="mapaHere.html">Explorar Mapas<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="mapaHere.html">Mapa Here</a></li>
+              <li><a href="mapasGoogle.html">Mapa Google</a></li>
+  
+            </ul>
+          </li>
+          <li><a href="climaHere.html">Clima</a></li>
+          <li><a href="MapaGeocode.html">Geocodificación</a></li>
+          <li><a href="vehiculos.html">Vehiculos</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+          <li><a href="Login/index.html"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
-    <div class="parallax">
+
+  <div id="index-banner">
+    <div >
       <div class="col-xs-12">
         <video width="300" height="150" style="width: 100%; height: auto;" id="videoBanner" class="center-block" playsinline="" autoplay="autoplay" preload="metadata" loop="loop">
 			    <source src="https://www.mirubee.com/img/promo-home.mp4"  type="video/mp4">
@@ -53,7 +118,7 @@
       <div class="icon-block">
         <h2 class="center brown-text"><i class="material-icons">cloud</i></h2>
           <h5 class="center">Integracion de Tecnologías</h5>
-          <p class="light class="justificado">
+          <p  class="justificado light">
             El internet de las cosas "IoT" esta creciendo globalmente porque cada vez existen 
             más dispositivos interconectados a la Internet, esto permite que se puedan recolectar
             datos del consumo eléctrico y realizar el proceso de encendido o apagado. Ademas de 
@@ -146,10 +211,25 @@
   </footer>
 
 
+   <!-- data-position can be : bottom, top, left, or right -->
+  <!-- data-tooltip defines the tooltip text -->
+        
+  <div class="fixed-action-btn" >
+    <a class="btn-floating btn-large red btn tooltipped" data-position="left" data-tooltip="Usuario">
+      <i class="large material-icons">face</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating green tooltipped" data-position="left" data-tooltip="Registrate"><i class="material-icons">publish</i></a></li>
+      <li><a  href="Login/index.html" class="btn-floating blue tooltipped" data-position="left" data-tooltip="Iniciar Sesion"><i class="material-icons">how_to_reg</i></a></li>
+    </ul>
+  </div>
+        
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="js/init.js"></script>
   <!-- <script src="js/dashboard.js"></script> -->
-  </body>
+  <script type="text/javascript" src="js/materialize.min.js"></script>  
+
+</body>
 </html>
