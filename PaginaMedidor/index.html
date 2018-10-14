@@ -10,13 +10,13 @@
   <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 
-
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
   <script type="text/javascript" src="jquery.visible.js"></script>
+
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
@@ -50,42 +50,34 @@
 
 </head>
 <body>
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>                        
-        </button>
-        <a class="navbar-brand" href="index.html">
-              <img id="img4" src="Imagenes/eurekLogo.png"  alt="">
-          </a>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Inicio</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="mapaHere.html">Explorar Mapas<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="mapaHere.html">Mapa Here</a></li>
-              <li><a href="mapasGoogle.html">Mapa Google</a></li>
   
-            </ul>
-          </li>
-          <li><a href="climaHere.html">Clima</a></li>
-          <li><a href="MapaGeocode.html">Geocodificación</a></li>
-          <li><a href="vehiculos.html">Vehiculos</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
-          <li><a href="Login/index.html"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesion</a></li>
-        </ul>
-      </div>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"> 
+
+          <img id="img4" src="assets/eurekLogo.png"  alt="">
+
+      </a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
     </div>
   </nav>
 
-  <div id="index-banner" class="parallax-container">
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="sass.html">Sass</a></li>
+    <li><a href="badges.html">Components</a></li>
+    <li><a href="collapsible.html">Javascript</a></li>
+    <li><a href="mobile.html">Mobile</a></li>
+  </ul>
+        
+
+
+  <div id="index-banner" >
     <div>
       <div class="col-xs-12">
         <video width="300" height="150" style="width: 100%; height: auto;" id="videoBanner" class="center-block" playsinline="" autoplay="autoplay" preload="metadata" loop="loop">
@@ -93,7 +85,7 @@
 			    <source src="https://www.mirubee.com/img/promo-home.webm"  type="video/webm">
        </video>
        
-       <br> </br>
+      <br>
       </div>
     </div>  
   </div>
