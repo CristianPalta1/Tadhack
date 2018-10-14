@@ -74,3 +74,11 @@ h3{
   text-emphasis-color: black;
   font-size: 30px;
 }
+
+.w3-myfont {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+ul.listacirculo {
+  list-style-type: square;
+}
