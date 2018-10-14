@@ -6,6 +6,12 @@
  * Made By MaterializeCSS.com
  */
 
+ #img4{
+  width: 80px;
+  margin-top: 0;
+  }
+  
+
 nav ul a,
 nav .brand-logo {
   color: #444;
