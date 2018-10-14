@@ -61,5 +61,6 @@ p.justi{
 }
 
 h3{
-  color: black
+  text-emphasis-color: black;
+  font-size: 30px;
 }
