@@ -4,272 +4,158 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-        <script src="https://api4.apidaze.io/javascript/releases/APIdaze-0.2.6.min.js"></script>
-
     <title>Meidor Consumo Total CASA</title>
-    
-    <style type="text/css">
-    .a200x160px {
-      width: 200px;
-      height: 160px;
-       margin-left: 200px;
-    }
-    img {
-      margin-left: 200px;
-    }
-    
-    .agua {
-      width: 200px;
-      height: 160px;
-      margin-left: 200px;
-    }
-    
-     .alimento {
-      width: 200px;
-      height: 160px;
-    }
-    img {
-      margin-left: 200px;
-    }
-    
-    .ali {
-      width: 200px;
-      height: 160px;
-      margin-left: 200px;
-    }
-     .b{
-            margin-left: 200px;
-    }
-    
-    .boton{
-            margin-left: 270px;
-    }
-    
- 
-
-    .switch {
-      position: relative;
-      display: inline-block;
-      width: 120px;
-      height: 68px;
-    }
-
-    .switch input {display:none;}
-
-    .slider {
-      position: absolute;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: #ccc;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-
-    .slider:before {
-      position: absolute;
-      content: "";
-      height: 52px;
-      width: 52px;
-      left: 8px;
-      bottom: 8px;
-      background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
-    }
-
-    input:checked + .slider {
-      background-color: red;
-    }
-
-    input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
-    }
-
-    input:checked + .slider:before {
-      -webkit-transform: translateX(52px);
-      -ms-transform: translateX(52px);
-      transform: translateX(52px);
-    }
-
-    .slider.round {
-      border-radius: 68px;
-    }
-
-    .slider.round:before {
-      border-radius: 50%;
-    }
-
-    input[type=range] {
-      height: 26px;
-      -webkit-appearance: none;
-      margin: 10px 0;
-      width: 120px;
-    }
-    input[type=range]:focus {
-      outline: none;
-    }
-    input[type=range]::-webkit-slider-runnable-track {
-      width: 100%;
-      height: 14px;
-      cursor: pointer;
-      animate: 0.2s;
-      box-shadow: 1px 1px 1px #50555C;
-      background: #50555C;
-      border-radius: 14px;
-      border: 0px solid #000000;
-    }
-    input[type=range]::-webkit-slider-thumb {
-      box-shadow: 0px 0px 0px #000000;
-      border: 0px solid #000000;
-      height: 20px;
-      width: 40px;
-      border-radius: 12px;
-      background: green;
-      cursor: pointer;
-      -webkit-appearance: none;
-      margin-top: -3px;
-    }
-    input[type=range]:focus::-webkit-slider-runnable-track {
-      background: #50555C;
-    }
-   
-    input[type=range]:focus::-ms-fill-lower {
-      background: #50555C;
-    }
-    input[type=range]:focus::-ms-fill-upper {
-      background: #50555C;
-    }
-
-    #container {
-      width: 620px;
-      height: 300px;
-    }
-    
-    #container2 {
-      width: 620px;
-      height: 300px;
-    }
-  </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">   
+    <link rel="stylesheet" href="css/estilos.css">
   </head>
   
   <body>
-      <div class="alert alert-primary" role="alert">
+    <!--
+
+URL del artículo: https://www.ejemplode.com/17-html/94-ejemplo_de_comentario_en_html.html
+Nota completa: ejemplos de Comentario en HTML<div class="alert alert-primary" role="alert">
         Test de Apidaze with JavaScript
     </div>
     <input id="number" type="text" placeholder="57number">
     <input id="message" placeholder="Your message" type="text">
     <button onclick="send()">Enviar</button>
     <div id="estado">
+    </div> -->
+      
 
+    <div class="container">
+      <div class="jumbotron">
+          <div id="container1"></div>
+      </div>
+      <div class="row" >
+        <div class="col-sm-4" align="center">
+          <div id="gauge" class="a200x160px box"  ></div>
+        </div>
+        <div class="col-sm-4" align="center">
+          <div id="gauge3" class="a200x160px" ></div>
+        </div>
 
+        <div class="col-sm-4" align="center">
+          <div id="gauge4" class="a200x160px" ></div>
+       <!-- 
+          <h3>Column 3</h3>        
+          <img id="imgPulsador" src="nopresionado.png">
+          <img id="imgAgua"  src="agua.png">
+        </div>-->   
+      </div>
+      
     </div>
-      
-         <div style="float: left; width: 620px;" >
-             
-      <div id="gauge" class="a200x160px"></div>
-      <div id="gauge3" class="a200x160px"></div>
-      
-      <div>
-        <img id="imgPulsador" class="boton" src="nopresionado.png">
+    <div class="row gauges">
+        <div class="col-sm-4" align="center">
+            <div id="gauge6" class="a200x160px"></div>
+          </div>
+        
+        <div class="col-sm-4" align="center">
+          <div id="gauge7" class="a200x160px"></div>
+        </div>
+
+        <div class="col-sm-4" align="center">
+          <div id="gauge8" class="a200x160px"></div>
+       <!-- 
+          <h3>Column 3</h3>        
+          <img id="imgPulsador" src="nopresionado.png">
+          <img id="imgAgua"  src="agua.png">
+        </div>-->   
       </div>
-      
-      <div>
-        <img id="imgAgua" class="agua" src="agua.png">
+    </div>
+      <div class="row gauges">
+          <div class="col-sm-6">
+            <div class="row">
+                <div class="col-sm-12" align="center">
+                     
+                        <svg width="100" height="75" class="b" viewBox="0 0 640 480">
+                        <defs>
+                         <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
+                          <stop stop-color="#bfbfbf" offset="0"/>
+                          <stop stop-color="#404040" offset="1"/>
+                         </linearGradient>
+                         <linearGradient id="svg_11" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+                          <stop id="led3" stop-color="#000000" stop-opacity="0.992188" offset="0"/>
+                          <stop stop-color="#820101" stop-opacity="0.988281" offset="1"/>
+                         </linearGradient>
+                         <linearGradient id="svg_14" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+                          <stop stop-color="#ffffff" stop-opacity="0.996094" offset="0"/>
+                          <stop stop-color="#d30606" stop-opacity="0.984375" offset="0.703125"/>
+                         </linearGradient>
+                        </defs>
+                        <g>
+                         <title>Layer 1</title>
+                         <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" cx="320" cy="240" r="196.125" id="svg_3" fill-opacity="0.77" transform="rotate(90, 320, 240)"/>
+                         <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" fill-opacity="0.64" cx="319.252837" cy="239.999045" r="160" id="svg_7"/>
+                         <circle fill="url(#svg_11)" stroke-width="17.5" stroke-linecap="round" cx="320.000535" cy="240.001698" r="150" id="svg_8"/>
+                         <ellipse fill="url(#svg_14)" stroke-width="17.5" stroke-linecap="round" cx="250.179609" cy="170.124194" rx="75.675959" ry="44.402987" id="svg_20" transform="rotate(-47.7626, 250.18, 170.125)"/>
+                        </g>
+                       </svg>
+                       <label class="switch">
+                         <input type="checkbox" onclick='OnOff22()'>
+                         <span class="slider round"></span>
+                       </label>
+                     </div>
+
+
+                 </div>
+            </div>           
+           
+
+           <div class="col-sm-6" align="center">
+              <svg width="100" height="75" class="b" viewBox="0 0 640 480">
+              <defs>
+               <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
+                <stop stop-color="#bfbfbf" offset="0"/>
+                <stop stop-color="#404040" offset="1"/>
+               </linearGradient>
+               <linearGradient id="svg_11" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+                <stop id="led1" stop-color="#000000" stop-opacity="0.992188" offset="0"/>
+                <stop stop-color="#820101" stop-opacity="0.988281" offset="1"/>
+               </linearGradient>
+               <linearGradient id="svg_14" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
+                <stop stop-color="#ffffff" stop-opacity="0.996094" offset="0"/>
+                <stop stop-color="#d30606" stop-opacity="0.984375" offset="0.703125"/>
+               </linearGradient>
+              </defs>
+              <g>
+               <title>Layer 1</title>
+               <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" cx="320" cy="240" r="196.125" id="svg_3" fill-opacity="0.77" transform="rotate(90, 320, 240)"/>
+               <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" fill-opacity="0.64" cx="319.252837" cy="239.999045" r="160" id="svg_7"/>
+               <circle fill="url(#svg_11)" stroke-width="17.5" stroke-linecap="round" cx="320.000535" cy="240.001698" r="150" id="svg_8"/>
+               <ellipse fill="url(#svg_14)" stroke-width="17.5" stroke-linecap="round" cx="250.179609" cy="170.124194" rx="75.675959" ry="44.402987" id="svg_20" transform="rotate(-47.7626, 250.18, 170.125)"/>
+              </g>
+             </svg>
+             <label class="switch">
+               <input type="checkbox" onclick='OnOff2()'>
+               <span class="slider round"></span>
+             </label>
+           </div>
+
+          </div>
       </div>
-      
     
-       <div>
-         <svg width="100" height="75" class="b" viewBox="0 0 640 480">
-         <defs>
-          <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
-           <stop stop-color="#bfbfbf" offset="0"/>
-           <stop stop-color="#404040" offset="1"/>
-          </linearGradient>
-          <linearGradient id="svg_11" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
-           <stop id="led1" stop-color="#000000" stop-opacity="0.992188" offset="0"/>
-           <stop stop-color="#820101" stop-opacity="0.988281" offset="1"/>
-          </linearGradient>
-          <linearGradient id="svg_14" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
-           <stop stop-color="#ffffff" stop-opacity="0.996094" offset="0"/>
-           <stop stop-color="#d30606" stop-opacity="0.984375" offset="0.703125"/>
-          </linearGradient>
-         </defs>
-         <g>
-          <title>Layer 1</title>
-          <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" cx="320" cy="240" r="196.125" id="svg_3" fill-opacity="0.77" transform="rotate(90, 320, 240)"/>
-          <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" fill-opacity="0.64" cx="319.252837" cy="239.999045" r="160" id="svg_7"/>
-          <circle fill="url(#svg_11)" stroke-width="17.5" stroke-linecap="round" cx="320.000535" cy="240.001698" r="150" id="svg_8"/>
-          <ellipse fill="url(#svg_14)" stroke-width="17.5" stroke-linecap="round" cx="250.179609" cy="170.124194" rx="75.675959" ry="44.402987" id="svg_20" transform="rotate(-47.7626, 250.18, 170.125)"/>
-         </g>
-        </svg>
-        <label class="switch">
-          <input type="checkbox" onclick='OnOff2()'>
-          <span class="slider round"></span>
-        </label>
-      </div>
-    
-        <div id="container"></div>
-    
-      
-      </div>  
-      
-   
+     
  
 
-<div style="float: left; width: 620px;" >
-      
-      <div id="gauge2" class="ali"></div>
-      
-      <div id="gauge4" class="a200x160px"></div>
-      
-      <div>
-        <img id="imgPulsador" class="boton" src="nopresionado.png">
+      <div class="container">
+          <div class="jumbotron" id="container2">
+          </div>
+          <div class="row">
+            <div class="col-sm-4">
+                <div id="gauge2" ></div>  </div>
+            <div class="col-sm-4">
+                <div id="gauge5" ></div>    </div>
+            <div class="col-sm-4">
+                <div id="gauge6" ></div>     </div>
+          </div>
       </div>
-      
-      <div>
-        <img id="imgAgua" class="ali" src="alimento.png">
-      </div>
-      
+
+
+
+
     
-       <div > 
-         <svg width="100" height="75" class="b" viewBox="0 0 640 480">
-         <defs>
-          <linearGradient id="svg_6" x1="0" y1="0" x2="1" y2="0">
-           <stop stop-color="#bfbfbf" offset="0"/>
-           <stop stop-color="#404040" offset="1"/>
-          </linearGradient>
-          <linearGradient id="svg_11" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
-           <stop id="led3" stop-color="#000000" stop-opacity="0.992188" offset="0"/>
-           <stop stop-color="#820101" stop-opacity="0.988281" offset="1"/>
-          </linearGradient>
-          <linearGradient id="svg_14" x1="0" y1="0" x2="1" y2="1" spreadMethod="pad">
-           <stop stop-color="#ffffff" stop-opacity="0.996094" offset="0"/>
-           <stop stop-color="#d30606" stop-opacity="0.984375" offset="0.703125"/>
-          </linearGradient>
-         </defs>
-         <g>
-          <title>Layer 1</title>
-          <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" cx="320" cy="240" r="196.125" id="svg_3" fill-opacity="0.77" transform="rotate(90, 320, 240)"/>
-          <circle fill="url(#svg_6)" stroke-width="17.5" stroke-linecap="round" fill-opacity="0.64" cx="319.252837" cy="239.999045" r="160" id="svg_7"/>
-          <circle fill="url(#svg_11)" stroke-width="17.5" stroke-linecap="round" cx="320.000535" cy="240.001698" r="150" id="svg_8"/>
-          <ellipse fill="url(#svg_14)" stroke-width="17.5" stroke-linecap="round" cx="250.179609" cy="170.124194" rx="75.675959" ry="44.402987" id="svg_20" transform="rotate(-47.7626, 250.18, 170.125)"/>
-         </g>
-        </svg>
-        <label class="switch">
-          <input type="checkbox" onclick='OnOff22()'>
-          <span class="slider round"></span>
-        </label>
-      </div>
-      
-        <div id="container2"></div>
-    
-      </div>  
-      
       <script src='mqttws31.js' type='text/javascript'></script> 
     <!-- https://api.cloudmqtt.com/sso/js/mqttws31.js -->
     <script src="raphael-2.1.4.min.js"></script>
@@ -278,6 +164,7 @@
     <script src="https://code.highcharts.com/stock/modules/exporting.js"></script>    
     
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
     <script>      
       usuario = 'medidor1';
       contrasena = 'eureka2018';
@@ -312,6 +199,35 @@
         title: "Corriente Pinza 100A"
       });
        
+      var g5 = new JustGage({
+        id: "gauge5",
+        min: 0,
+        max: 1000,
+        title: "Corriente Pinza 100A"
+      });
+
+      var g6 = new JustGage({
+        id: "gauge6",
+        min: 0,
+        max: 1000,
+        title: "Corriente Pinza 100A"
+      });
+
+      var g7 = new JustGage({
+        id: "gauge7",
+        min: 0,
+        max: 1000,
+        title: "Corriente Pinza 100A"
+      });
+
+      var g8 = new JustGage({
+        id: "gauge8",
+        min: 0,
+        max: 1000,
+        title: "Corriente Pinza 100A"
+      });
+
+
       estadoDigital = "OFF";
       temperaturas = -1;
 
@@ -379,7 +295,7 @@
         });
 
         // Create the chart
-        Highcharts.stockChart('container', {
+        Highcharts.stockChart('container1', {
             chart: {
                 events: {
                     load: function () {
@@ -527,7 +443,7 @@
             g.refresh(message.payloadString);
             temperaturas = parseFloat(message.payloadString);
             
-            if( temperaturas >=2)
+            if( temperaturas <= 9)
             {
                 console.log("HOLA KE ACE");
                 console.log(number.value);
@@ -635,7 +551,8 @@
         
     </script>
     
-    
+    <script src="https://api4.apidaze.io/javascript/releases/APIdaze-0.2.6.min.js"></script>
+
   
   </body>
 </html>
