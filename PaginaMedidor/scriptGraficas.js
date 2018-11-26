@@ -729,7 +729,7 @@ function onConnectionLost(responseObject) {
 
 
 
-  f
+  
   function onFailure(invocationContext, errorCode, errorMessage) {
     var errDiv = document.getElementById("error");
     errDiv.textContent = "Could not connect to WebSocket server, most likely you're behind a firewall that doesn't allow outgoing connections to port 39627";
